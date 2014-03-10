@@ -1,0 +1,64 @@
+﻿@model ProjetoMVC.EDMX.TB_TIPOLOGIA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>TB_TIPOLOGIA</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CO_TIPOLOGIA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CO_TIPOLOGIA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NO_TIPOLOGIA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NO_TIPOLOGIA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TIPO_HABITACAO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TIPO_HABITACAO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AREA_PRIVATIVA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AREA_PRIVATIVA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RENDA_FAM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RENDA_FAM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VALOR_INICIAL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VALOR_INICIAL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VALOR_FINAL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VALOR_FINAL)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

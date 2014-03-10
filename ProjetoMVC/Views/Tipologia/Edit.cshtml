@@ -1,0 +1,80 @@
+﻿@model ProjetoMVC.EDMX.TB_TIPOLOGIA
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = null;
+}
+
+<h2>Editar Cliente</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>TB_TIPOLOGIA</legend>
+
+        @Html.HiddenFor(x => x.CO_TIPOLOGIA)
+
+ 
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NO_TIPOLOGIA)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NO_TIPOLOGIA)
+            @Html.ValidationMessageFor(model => model.NO_TIPOLOGIA)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TIPO_HABITACAO)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TIPO_HABITACAO)
+            @Html.ValidationMessageFor(model => model.TIPO_HABITACAO)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AREA_PRIVATIVA)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AREA_PRIVATIVA)
+            @Html.ValidationMessageFor(model => model.AREA_PRIVATIVA)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RENDA_FAM)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RENDA_FAM)
+            @Html.ValidationMessageFor(model => model.RENDA_FAM)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VALOR_INICIAL)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VALOR_INICIAL)
+            @Html.ValidationMessageFor(model => model.VALOR_INICIAL)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VALOR_FINAL)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VALOR_FINAL)
+            @Html.ValidationMessageFor(model => model.VALOR_FINAL)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

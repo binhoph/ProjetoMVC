@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_SISCODHABModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TB_TIPOLOGIA">
+          <Key>
+            <PropertyRef Name="CO_TIPOLOGIA" />
+          </Key>
+          <Property Name="CO_TIPOLOGIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NO_TIPOLOGIA" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TIPO_HABITACAO" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="AREA_PRIVATIVA" Type="int" Nullable="false" />
+          <Property Name="RENDA_FAM" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="VALOR_INICIAL" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="VALOR_FINAL" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityContainer Name="DB_SISCODHABModelStoreContainer">
+          <EntitySet Name="TB_TIPOLOGIA" EntityType="Self.TB_TIPOLOGIA" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_SISCODHABModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DB_SISCODHABEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="TB_TIPOLOGIA" EntityType="DB_SISCODHABModel.TB_TIPOLOGIA" />
+        </EntityContainer>
+        <EntityType Name="TB_TIPOLOGIA">
+          <Key>
+            <PropertyRef Name="CO_TIPOLOGIA" />
+          </Key>
+          <Property Name="CO_TIPOLOGIA" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NO_TIPOLOGIA" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TIPO_HABITACAO" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="AREA_PRIVATIVA" Type="Int32" Nullable="false" />
+          <Property Name="RENDA_FAM" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="VALOR_INICIAL" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="VALOR_FINAL" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_SISCODHABModelStoreContainer" CdmEntityContainer="DB_SISCODHABEntities">
+          <EntitySetMapping Name="TB_TIPOLOGIA">
+            <EntityTypeMapping TypeName="DB_SISCODHABModel.TB_TIPOLOGIA">
+              <MappingFragment StoreEntitySet="TB_TIPOLOGIA">
+                <ScalarProperty Name="CO_TIPOLOGIA" ColumnName="CO_TIPOLOGIA" />
+                <ScalarProperty Name="NO_TIPOLOGIA" ColumnName="NO_TIPOLOGIA" />
+                <ScalarProperty Name="TIPO_HABITACAO" ColumnName="TIPO_HABITACAO" />
+                <ScalarProperty Name="AREA_PRIVATIVA" ColumnName="AREA_PRIVATIVA" />
+                <ScalarProperty Name="RENDA_FAM" ColumnName="RENDA_FAM" />
+                <ScalarProperty Name="VALOR_INICIAL" ColumnName="VALOR_INICIAL" />
+                <ScalarProperty Name="VALOR_FINAL" ColumnName="VALOR_FINAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

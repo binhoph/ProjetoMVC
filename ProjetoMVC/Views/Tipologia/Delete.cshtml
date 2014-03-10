@@ -1,0 +1,68 @@
+﻿@model ProjetoMVC.EDMX.TB_TIPOLOGIA
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>TB_TIPOLOGIA</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CO_TIPOLOGIA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CO_TIPOLOGIA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NO_TIPOLOGIA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NO_TIPOLOGIA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TIPO_HABITACAO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TIPO_HABITACAO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AREA_PRIVATIVA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AREA_PRIVATIVA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RENDA_FAM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RENDA_FAM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VALOR_INICIAL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VALOR_INICIAL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VALOR_FINAL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VALOR_FINAL)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
